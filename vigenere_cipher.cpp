@@ -1,22 +1,7 @@
 #include <iostream>
 using namespace std;
 
-string szyfruj(string wyraz, int klucz, string alfabet){
-	string wynik = "";
-
-	int dlugoscAlfabetu = alfabet.length();
-	int dlugoscTekstu = wyraz.length();
-
-	for (int i=0; i<dlugoscTekstu; i++){
-		for (int j=0; j < dlugoscAlfabetu; j++){
-			if (wyraz[i] == alfabet[j])
-				wynik += alfabet[(j+klucz)%dlugoscAlfabetu];
-		}
-	}
-	return wynik;
-}
-
-int pozycjaLitery(string tekst, char litera){ // -1 jeœli nie zawiera
+int pozycjaLitery(string tekst, char litera){ // -1 jeÅ“li nie zawiera
     int l = tekst.length();
     for (int i = 0; i < l; i++)
         if (tekst[i] == litera)
